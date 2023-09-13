@@ -7,6 +7,11 @@ import java.time.LocalDate
 class LogService {
     def salvarLog(LocalDate data, String descricao) {
         def novoLog = new Log(data: data, descricao: descricao)
+        println("Salvou o log")
         novoLog.save(flush: true)
+    }
+
+    def testarConexao(){
+        println("Entrou aqui finalmente caralho")
     }
 }
